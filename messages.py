@@ -18,7 +18,10 @@ facts = ["Um dia em Júpiter dura 8 horas.",
          "1 milhão de planetas Terra caberiam dentro do Sol",
          "Mercúrio e Vênus possuem fases como as da Lua",
          "Mercúrio faz 3 rotações a cada 2 translações",
-         "A terra é o planeta mais denso, com 5.515 g/cm³"]
+         "A terra é o planeta mais denso, com 5.515 g/cm³",
+         "Júpiter irradia mais calor do que recebe do Sol",
+         "Saturno possui 62 luas. Apenas 53 foram oficialmente nomeadas",
+         "Titã é uma lua de Saturno, e a única no Sistema Solar a possuir uma atmosfera"]
 
 photos = ['https://s-media-cache-ak0.pinimg.com/originals/13/fd/40/13fd40e830fa3c00c4638f743cbce6a5.jpg',  # Pale Blue Dot
           'https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg',  # Uranus
