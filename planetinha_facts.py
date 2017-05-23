@@ -1,13 +1,9 @@
 """Um bot de Telegram que envia fun facts sobre o Sistema Solar."""
 import logging
 
-# import os
-
 import random
 
 from messages import facts, help_msg, start_msg, TOKEN, photos
-
-# import telegram
 
 from telegram.ext import CommandHandler, Updater, MessageHandler, Filters
 
