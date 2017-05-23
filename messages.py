@@ -42,4 +42,4 @@ photos = ['https://s-media-cache-ak0.pinimg.com/originals/13/fd/40/13fd40e830fa3
           'https://www.jpl.nasa.gov/images/msl/20150508b/pia19400-16.jpg'  # Mars' sunset
           ]
 
-TOKEN = '386613898:AAEim14KAq2RCMjfv2QJOuhYbETz1disTHo'
+TOKEN = xxx
