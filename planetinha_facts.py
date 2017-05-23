@@ -9,7 +9,7 @@ from messages import facts, help_msg, start_msg, TOKEN, photos
 
 # import telegram
 
-from telegram.ext import CommandHandler, Updater
+from telegram.ext import CommandHandler, Updater, MessageHandler, Filters
 
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -21,15 +21,25 @@ def start(bot, update):
                     text=start_msg)
 
 
-def trigger(percentage=100):
-    """Calcula probabilidade para resposta automática."""
+def trigger(percentage=15):
+    """Calcula probabilidade para resposta automatica."""
+    return random.randrange(100) < percentage
+
+
+def second_trigger(percentage=10):
+    """Calcula probabilidade para fotos."""
     return random.randrange(100) < percentage
 
 
 def random_facts(bot, update):
     """Dispara uma resposta automática."""
     if trigger():
-        fun_facts()
+        if second_trigger():
+            bot.send_photo(chat_id=update.message.chat_id,
+                           photo=random.choice(photos))
+        else:
+            bot.sendMessage(chat_id=update.message.chat_id,
+                            text=random.choice(facts))
 
 
 def help_cmd(bot, update):
@@ -61,6 +71,7 @@ facts_handler = CommandHandler('fact', fun_facts)
 dispatcher.add_handler(facts_handler)
 pic_handler = CommandHandler('pic', fun_pics)
 dispatcher.add_handler(pic_handler)
+dispatcher.add_handler(MessageHandler(Filters.all, random_facts))
 
 updater.start_polling()
 updater.idle()
