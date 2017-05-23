@@ -21,8 +21,15 @@ def start(bot, update):
                     text=start_msg)
 
 
-# def trigger(percentage=5):
-#     return random.randrange(100) < percentage
+def trigger(percentage=100):
+    """Calcula probabilidade para resposta automática."""
+    return random.randrange(100) < percentage
+
+
+def random_facts(bot, update):
+    """Dispara uma resposta automática."""
+    if trigger():
+        fun_facts()
 
 
 def help_cmd(bot, update):
