@@ -3,8 +3,6 @@ start_msg = "Prepare-se para conhecer o fantabulástico mundo dos planetinhas"
 
 help_msg = 'Envie "/fact"'
 
-help_msg = 'Você está prestes a mergulhar em um universo cheio de conhecimento'
-
 facts = ["Um dia em Júpiter dura 8 horas.",
          "Vênus possui apenas 2 dias em um ano.",
          "A densidade de Saturno é 0.7 g/cm³. É o único planeta que boiaria na água",

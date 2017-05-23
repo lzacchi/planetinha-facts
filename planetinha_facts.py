@@ -21,20 +21,15 @@ def start(bot, update):
                     text=start_msg)
 
 
-def trigger(percentage=15):
-    """Calcula probabilidade para resposta automatica."""
-    return random.randrange(100) < percentage
-
-
-def second_trigger(percentage=10):
-    """Calcula probabilidade para fotos."""
+def trigger(percentage):
+    """Calcula porcentagem para resposta automática."""
     return random.randrange(100) < percentage
 
 
 def random_facts(bot, update):
     """Dispara uma resposta automática."""
-    if trigger():
-        if second_trigger():
+    if trigger(15):
+        if trigger(10):
             bot.send_photo(chat_id=update.message.chat_id,
                            photo=random.choice(photos))
         else:
